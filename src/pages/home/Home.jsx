@@ -1,5 +1,5 @@
 import "./home.scss";
 const Home = () => {
-  return <div>Home</div>;
+  return <div>Welcome Admin</div>;
 };
 export default Home;
