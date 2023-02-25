@@ -35,9 +35,23 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 14px;
       &.positive{color: green}
       &.negative{color: red}
     }
+    .icon{
+      font-size: 2rem;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-end;
+}
   }
   .right{
     align-items: center;
