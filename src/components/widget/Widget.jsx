@@ -1,20 +1,20 @@
 import "./widget.scss";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import PeopleIcon from "@mui/icons-material/People";
-const Widget = () => {
+
+const Widget = ({ title, counter, percentage, icon }) => {
   return (
     <div className="widget">
       <div className="left">
-        <span className="title">users</span>
-        <span className="counter">3748</span>
-        <span className="link">see all users</span>
+        <span className="title">{title}</span>
+        <span className="counter">{counter}</span>
+        <span className="link">see all {title}</span>
       </div>
       <div className="right">
         <div className="percentage positive">
           <ExpandLessIcon />
-          20%
+          {percentage}%
         </div>
-        <PeopleIcon />
+        {icon}
       </div>
     </div>
   );
