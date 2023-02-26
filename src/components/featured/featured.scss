@@ -1,0 +1,61 @@
+.featured{
+  flex: 2;
+  box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  padding: 10px;
+  text-transform: capitalize;
+  .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: gray;
+    .title{
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .icon{cursor: pointer;}
+  }
+  .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    .chart-progress{
+      width: 100px;
+      height: 100px;
+    }
+    .title{
+      font-weight: 500;
+      color: gray;
+    }
+    .amount{
+      font-size: 2rem;
+    }
+    .description{
+      font-weight: 300;
+      font-size: 12px;
+      color: gray;
+      text-align: center;
+    }
+    .summary{
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+      width: 100%;
+      .item{
+        text-align: center;
+        .item-title{font-size: 14px;color: gray;}
+        .item-resualt{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 10px;
+          &.positive{color: green}
+          &.negative{color: red}
+        }
+      }
+    }
+  }
+}

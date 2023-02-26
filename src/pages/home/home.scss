@@ -3,10 +3,13 @@
   .homeContainer{
     flex-grow: 7;
   }
-  .widgets{
+  .widgets, .charts{
     display: flex;
     gap: 1rem;
     padding: 1rem;
     flex-wrap: wrap;
+  }
+  .charts{
+    padding: 5px 20px;
   }
 }
