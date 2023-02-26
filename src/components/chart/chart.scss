@@ -1,3 +1,14 @@
 .chart{
-  flex: 4;
+  flex: 5;
+  box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.20);
+  padding: 10px;
+  color: gray;
+  text-transform: capitalize;
+  .title{
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+  .chart-grid{
+    stroke: rgb(224, 224, 224);
+  }
 }
