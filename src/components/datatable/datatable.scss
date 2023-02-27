@@ -1,0 +1,31 @@
+.data-table{
+  padding: 1rem;
+  height: 611px;
+  .rating-cell{
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+    .icon{cursor: pointer;}
+  }
+  .thumbnail-cell{
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+    gap: 10px;
+    .image{
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      object-fit: cover;
+    }
+    .title{
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}

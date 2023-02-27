@@ -1,15 +1,20 @@
-.home{
+.widgets, .charts{
   display: flex;
-  .homeContainer{
-    flex-grow: 7;
-  }
-  .widgets, .charts{
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    flex-wrap: wrap;
-  }
-  .charts{
-    padding: 5px 20px;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+.charts{
+  padding: 5px 20px;
+}
+.list-container{
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.20);
+  text-transform: capitalize;
+  .title{
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: gray;
   }
 }

@@ -1,18 +1,40 @@
-import { createBrowserRouter, Outlet, redirect } from "react-router-dom";
+import { createBrowserRouter, redirect } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-import List from "./pages/list/List";
 import New from "./pages/new/New";
 import Single from "./pages/single/Single";
+import Layout from "./pages/Layout/Layout";
+import DataTable from "./components/datatable/Datatable";
+import {
+  USERS_PATTERN,
+  PRODUCTS_PATTERN,
+} from "./components/datatable/columns";
 export default createBrowserRouter([
   {
     path: "/",
-    element: <Outlet />,
+    element: <Layout />,
     errorElement: <>Error</>,
     children: [
       { index: true, element: <Home /> },
       { path: "login", element: <Login /> },
-      { path: "users", element: <List /> },
+      {
+        path: "users",
+        element: (
+          <DataTable
+            columns={USERS_PATTERN}
+            api_url="https://dummyjson.com/users"
+          />
+        ),
+      },
+      {
+        path: "products",
+        element: (
+          <DataTable
+            columns={PRODUCTS_PATTERN}
+            api_url="https://dummyjson.com/products"
+          />
+        ),
+      },
       {
         path: "users/new",
         element: <New />,
