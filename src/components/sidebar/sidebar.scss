@@ -14,21 +14,22 @@
       color: #6439ff;
     }
   }
-
   .center{
     padding-left: 10px;
     ul{
       padding: 0;
       margin: 0;
-      li {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: .4rem;
-        padding: 5px;
-        cursor: pointer;
-
-        &:hover{
+      li{
+        a{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: .4rem;
+          text-decoration: none;
+          padding: 5px;
+          cursor: pointer;
+        }
+        &:hover, .active{
           background-color: #ece8ff;
         }
 

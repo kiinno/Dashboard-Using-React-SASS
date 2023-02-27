@@ -1,10 +1,5 @@
-import DataTable from "../../components/datatable/Datatable";
 import "./list.scss";
 const List = () => {
-  return (
-    <>
-      <DataTable />
-    </>
-  );
+  return <div className="list">List</div>;
 };
 export default List;

@@ -97,18 +97,20 @@ export const PRODUCTS_PATTERN = [
     field: "category",
     headerName: "Catigory",
     width: 120,
-    valueGetter: ({ row: { category } }) => `${category.toUpperCase() || ""}`,
+    valueGetter: ({ row: { category } }) => `${category?.toUpperCase() || ""}`,
   },
   {
     field: "rating",
     headerName: "Rating",
     width: 110,
     renderCell: ({ row: { rating } }) => {
+      const stars = new Array(Math.trunc(rating));
+      stars.fill(null);
       return (
         <div className="rating-cell">
-          {new Array(Math.trunc(+rating)).fill(
-            <StarIcon fontSize="small" className="icon" />
-          )}
+          {stars.map((_, i) => {
+            return <StarIcon fontSize="small" className="icon" key={i} />;
+          })}
         </div>
       );
     },

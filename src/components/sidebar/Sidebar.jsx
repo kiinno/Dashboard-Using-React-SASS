@@ -11,6 +11,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import LogoutIcon from "@mui/icons-material/Logout";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -22,58 +23,82 @@ const Sidebar = () => {
         <ul>
           <p className="title">main</p>
           <li>
-            <DashboardIcon className="icon" />
-            <span>Dashbaord</span>
+            <NavLink to={"/"}>
+              <DashboardIcon className="icon" />
+              <span>Dashbaord</span>
+            </NavLink>
           </li>
           <p className="title">lists</p>
           <li>
-            <PersonIcon className="icon" />
-            <span>Users</span>
+            <NavLink to={"/users"}>
+              <PersonIcon className="icon" />
+              <span>Users</span>
+            </NavLink>
           </li>
           <li>
-            <LocalGroceryStoreIcon className="icon" />
-            <span>products</span>
+            <NavLink to={"/products"}>
+              <LocalGroceryStoreIcon className="icon" />
+              <span>products</span>
+            </NavLink>
           </li>
           <li>
-            <AccessTimeFilledIcon className="icon" />
-            <span>orders</span>
+            <NavLink to={"/orders"}>
+              <AccessTimeFilledIcon className="icon" />
+              <span>orders</span>
+            </NavLink>
           </li>
 
           <li>
-            <LocalShippingIcon className="icon" />
-            <span>deliveries</span>
+            <NavLink to={"/deliveries"}>
+              <LocalShippingIcon className="icon" />
+              <span>deliveries</span>
+            </NavLink>
           </li>
 
           <p className="title">useful</p>
           <li>
-            <BarChartIcon className="icon" />
-            <span>state</span>
+            <NavLink to={"/state"}>
+              <BarChartIcon className="icon" />
+              <span>state</span>
+            </NavLink>
           </li>
           <li>
-            <NotificationsNoneIcon className="icon" />
-            <span>notifications</span>
+            <NavLink to={"/notifications"}>
+              <NotificationsNoneIcon className="icon" />
+              <span>notifications</span>
+            </NavLink>
           </li>
           <p className="title">service</p>
           <li>
-            <MonitorHeartIcon className="icon" />
-            <span>system health</span>
+            <NavLink to={"/system"}>
+              <MonitorHeartIcon className="icon" />
+              <span>system health</span>
+            </NavLink>
           </li>
           <li>
-            <PsychologyAltIcon className="icon" />
-            <span>logs</span>
+            <NavLink to={"/logs"}>
+              <PsychologyAltIcon className="icon" />
+              <span>logs</span>
+            </NavLink>
           </li>
           <li>
-            <SettingsIcon className="icon" />
-            <span>settings</span>
+            <NavLink to={"/settings"}>
+              <SettingsIcon className="icon" />
+              <span>settings</span>
+            </NavLink>
           </li>
           <p className="title">user</p>
           <li>
-            <AccountBoxIcon className="icon" />
-            <span>profile</span>
+            <NavLink to={"/profile"}>
+              <AccountBoxIcon className="icon" />
+              <span>profile</span>
+            </NavLink>
           </li>
           <li>
-            <LogoutIcon className="icon" />
-            <span>logout</span>
+            <NavLink to={"/logout"}>
+              <LogoutIcon className="icon" />
+              <span>logout</span>
+            </NavLink>
           </li>
         </ul>
       </div>

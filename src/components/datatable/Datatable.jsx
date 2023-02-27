@@ -10,29 +10,28 @@ export default function DataTable({
   rows_per_pages = 9,
 }) {
   const [rows, setRows] = useState();
-  const fetchData = async () => {
-    const response = await fetch(api_url, {
-      method: "GET",
-    });
-    const data = await response.json();
-    setRows(data[Object.keys(data)[0]]);
-  };
+
   useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(api_url, {
+        method: "GET",
+      });
+      const data = await response.json();
+      setRows((prev) => {
+        return data[Object.keys(data)[0]];
+      });
+    };
     fetchData();
   }, []);
   return rows ? (
     <div className="data-table">
-      {!rows ? (
-        <Loader />
-      ) : (
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={pages}
-          rowsPerPageOptions={[rows_per_pages]}
-          checkboxSelection
-        />
-      )}
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        pageSize={pages}
+        rowsPerPageOptions={[rows_per_pages]}
+        checkboxSelection
+      />
     </div>
   ) : (
     <Loader />
