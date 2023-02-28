@@ -1,9 +1,9 @@
 import React from "react";
-import { useRouteError } from "react-router-dom";
+import { useNavigate, useRouteError } from "react-router-dom";
 import "./error.scss";
 const Error = () => {
   const error = useRouteError();
-  console.log(error.prototype);
+  const navigate = useNavigate();
   return (
     <div className="error-container">
       <div className="err">
@@ -11,6 +11,12 @@ const Error = () => {
           {error.statusText} {error.status}
         </h3>
         <p className="message">{error.error.message || error.message}</p>
+        <button
+          className="go-back"
+          onClick={() => navigate("/", { replace: true })}
+        >
+          back
+        </button>
       </div>
     </div>
   );

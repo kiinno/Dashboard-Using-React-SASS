@@ -22,21 +22,42 @@ export default createBrowserRouter([
       { path: "login", element: <Login /> },
       {
         path: "users",
-        element: (
-          <DataTable
-            columns={USERS_PATTERN}
-            api_url="https://dummyjson.com/users"
-          />
-        ),
+        element: <DataTable columns={USERS_PATTERN} type="users" />,
       },
       {
         path: "products",
-        element: (
-          <DataTable
-            columns={PRODUCTS_PATTERN}
-            api_url="https://dummyjson.com/products"
-          />
-        ),
+        element: <DataTable columns={PRODUCTS_PATTERN} type="products" />,
+      },
+      {
+        path: "orders",
+        element: <DataTable columns={PRODUCTS_PATTERN} type="products" />,
+      },
+      {
+        path: "deliveries",
+        element: <DataTable columns={PRODUCTS_PATTERN} type="products" />,
+      },
+
+      {
+        path: "state",
+        element: <>state</>,
+      },
+
+      {
+        path: "notifications",
+        element: <>notifications</>,
+      },
+
+      {
+        path: "system",
+        element: <>deliveries</>,
+      },
+      {
+        path: "logs",
+        element: <>deliveries</>,
+      },
+      {
+        path: "settings",
+        element: <>deliveries</>,
       },
       {
         path: "users/new",
