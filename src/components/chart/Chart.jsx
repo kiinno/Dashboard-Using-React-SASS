@@ -38,7 +38,7 @@ const Chart = () => {
   return (
     <div className="chart">
       <h5 className="title">last 6 months (revenue)</h5>
-      <ResponsiveContainer width="100%" aspect={2 / 1}>
+      <ResponsiveContainer width="100%" aspect={3 / 1}>
         <AreaChart
           width={730}
           height={250}
